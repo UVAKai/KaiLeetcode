@@ -1,0 +1,11 @@
+class Solution {
+    int[] leap = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int[] not_leap = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    public int numberOfDays(int Y, int M) {      
+        if ((Y%4 == 0 && Y%100 != 0) || (Y%400 == 0)) {
+            return leap[M - 1];
+        } else {
+            return not_leap[M - 1];
+        }
+    }
+}
