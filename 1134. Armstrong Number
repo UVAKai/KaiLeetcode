@@ -1,0 +1,16 @@
+class Solution {
+    public boolean isArmstrong(int N) {
+        int sum = 0;
+        int cur = N, cur2 = N;
+        int a = 0;
+        while (cur != 0) {
+            a++;
+            cur = cur/10;
+        }
+        while (N != 0) {
+            sum += Math.pow(N%10, a);
+            N = N/10;
+        }
+        return sum == cur2;
+    }
+}
